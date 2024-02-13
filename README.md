@@ -31,3 +31,10 @@ function mystery(n) {
 Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
+
+
+There are two recursive calls to mystery(n / 3) each time the function is called.
+There is a nested triple loop, with the outer loop running from 0 to n^2 , the inner loop running from 0 to n, and the innermost loop running from 0 to n^2 again. 
+The recursive calls are O(1) each.
+The loop computations dominate the work, which is O(n^4) at each level.
+Therefore, the tight big O bound for the runtime of the mystery function is O(n^4)
