@@ -33,15 +33,25 @@ page](https://docs.github.com/en/get-started/writing-on-github/working-with-adva
 might help with the notation for mathematical expressions.
 
 T(n)=1 if n<=1
-3T(n/3) + n^5 otherwise
+3T(n/3) + n^5 else
 
 Solve by substitution 
 
 $T(n) = 3T(\frac{n}{3}) + n^5$<br>
 $T(n) = 3(3T(\frac{n/3}{3}) + (\frac{n}{3})^5) + n^5$<br>
 $T(n) = 3^2T(\frac{n}{3^2}) + \frac{n^5}{3^4} + n^5$<br>
+$T(n) = 3^3T(\frac{n}{3^3}) + \frac{n^5}{3^5} + \frac{n^5}{3^4} + n^5$<br>
 
-from here we can see the pattern and derive the recurrance relation 
+Looking at the pattern, we can see the recurrence relation is
 
-$n + \displaystyle\sum_{i=0}^{\log_{3} n}\frac{n^5}{n+2} + n^5$<br>
-so the time complexity is found to be $\Theta(n^5)$
+$3^iT(\frac{n}{3^i}) + \displaystyle\sum_{j=0}^i \frac{n^5}{3^{i+2}}  + n^5$.<br>
+To terminate the recurrence, $T(n)$ must be <= 1. <br>
+According to the pattern, $T(1) = T(\frac{n}{3^i})$<br>
+$\frac{n}{3^i} = 1$<br>
+$n = 3^i$<br>
+$i = \log_{3} n$ <- value of i when n = 1. <br>
+Plugging it in: <br>
+$3^{\log_{3} n}  * T(1) + \displaystyle\sum_{j=0}^{\log_{3} n} \frac{n^5}{3^{(\log_{3} n) + 2}} + n^5$<br>
+Which simplifies to $n + \displaystyle\sum_{j=0}^{\log_{3} n}\frac{n^5}{n+2} + n^5$<br>
+
+so the time complexity is $\Theta(n^5)$
