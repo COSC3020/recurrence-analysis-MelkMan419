@@ -41,5 +41,7 @@ $T(n) = 3T(\frac{n}{3}) + n^5$<br>
 $T(n) = 3(3T(\frac{n/3}{3}) + (\frac{n}{3})^5) + n^5$<br>
 $T(n) = 3^2T(\frac{n}{3^2}) + \frac{n^5}{3^4} + n^5$<br>
 
+from here we can see the pattern and derive the recurrance relation 
+
 $n + \displaystyle\sum_{i=0}^{\log_{3} n}\frac{n^5}{n+2} + n^5$<br>
 so the time complexity is found to be $\Theta(n^5)$
