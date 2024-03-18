@@ -50,7 +50,7 @@ According to the pattern, $T(1) = T(\frac{n}{3^i})$<br>
 $\frac{n}{3^i} = 1$<br>
 $n = 3^i$<br>
 $i = \log_{3} n$ <- value of i when n = 1. <br>
-Plugging it in: <br>
+When we plug it back into the equation we get <br>
 $3^{\log_{3} n}  * T(1) + \displaystyle\sum_{j=0}^{\log_{3} n} \frac{n^5}{3^{(\log_{3} n) + 2}} + n^5$<br>
 Which simplifies to $n + \displaystyle\sum_{j=0}^{\log_{3} n}\frac{n^5}{n+2} + n^5$<br>
 
