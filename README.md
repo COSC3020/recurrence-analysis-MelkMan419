@@ -32,5 +32,11 @@ Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
 
-Ah now I see, combined iteration count: (n^2)(n)(n^2)=n^5
-Therefore O(n^5) is the tight big O bounds
+T(n)=1 if n<=1
+3T(n/3) + n^5 otherwise
+Solve by substitution 
+T(n)=3T(n/3) + n^5
+T(n)=3(3T((n/3)/3)+((n/3)/3)^5) + n^5
+T(n)=(3^2)T(n/(3^2)) + (n^5/3^5) + (n^5/3^4) + n^5
+
+from this we can get the relation which is n plus the sum from 0 to log(sub3) n (((n^5)/n+2)+n^5)) therefore the time complexity is $/Theta/$ (n^5)
