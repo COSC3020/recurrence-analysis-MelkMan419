@@ -32,8 +32,8 @@ Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
 
-T(n)=1 if n<=1
-3T(n/3) + n^5 else
+$T(n) =$ 1 if $n <= 1$ <br>
+$3T(\frac{n}{3}) + n^5$ otherwise <br>
 
 Solve by substitution 
 
@@ -44,7 +44,7 @@ $T(n) = 3^3T(\frac{n}{3^3}) + \frac{n^5}{3^5} + \frac{n^5}{3^4} + n^5$<br>
 
 Looking at the pattern, we can see the recurrence relation is
 
-$3^iT(\frac{n}{3^i}) + \displaystyle\sum_{j=0}^i \frac{n^5}{3^{i+2}}  + n^5$.<br>
+$T(n) = 3^iT(\frac{n}{3^i}) + \displaystyle\sum_{j=0}^i \frac{n^5}{3^{i+2}}  + n^5$.<br>
 To terminate the recurrence, $T(n)$ must be <= 1. <br>
 According to the pattern, $T(1) = T(\frac{n}{3^i})$<br>
 $\frac{n}{3^i} = 1$<br>
