@@ -35,8 +35,9 @@ might help with the notation for mathematical expressions.
 T(n)=1 if n<=1
 3T(n/3) + n^5 otherwise
 Solve by substitution 
-T(n)=3T(n/3) + n^5
-T(n)=3(3T((n/3)/3)+((n/3)/3)^5) + n^5
-T(n)=(3^2)T(n/(3^2)) + (n^5/3^5) + (n^5/3^4) + n^5
+$T(n) = 3T(\frac{n}{3}) + n^5$<br>
+$T(n) = 3(3T(\frac{n/3}{3}) + (\frac{n}{3})^5) + n^5$<br>
+$T(n) = 3^2T(\frac{n}{3^2}) + \frac{n^5}{3^4} + n^5$<br>
 
-from this we can get the relation which is n plus the sum from 0 to log(sub3) n (((n^5)/n+2)+n^5)) therefore the time complexity is $/Theta/$ (n^5)
+$n + \displaystyle\sum_{i=0}^{\log_{3} n}\frac{n^5}{n+2} + n^5$<br>
+so the time complexity is found to be $\Theta(n^5)$
