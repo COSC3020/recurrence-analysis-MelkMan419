@@ -33,7 +33,7 @@ page](https://docs.github.com/en/get-started/writing-on-github/working-with-adva
 might help with the notation for mathematical expressions.
 
 $T(n) =$ 1 if $n <= 1$ <br>
-$3T(\frac{n}{3}) + n^5$ otherwise <br>
+$3T(\frac{n}{3}) + n^5$ + C otherwise <br>
 
 Solve by substitution 
 
