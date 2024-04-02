@@ -45,7 +45,7 @@ $=9T(\frac{n}{9})+3(\frac{n}{3})^5+3C+n^5+C$
 
 $=9T(\frac{n}{9})+3(\frac{n}{3})^5+n^5+3C+C$
 
-$=3^kT(\frac{n}{3^k})+\sum\limits_{i=0}^{k-1} 3^i(\frac{n}{3^i}) +\sum\limits_{i=0}^{k-1} 3^iC$
+$=3^kT(\frac{n}{3^k})+\sum\limits_{i=0}^{k-1} (\frac{n}{3})^i +\sum\limits_{i=0}^{k-1} 3^iC$
 
 $=3^kT(\frac{n}{3^k})+\sum\limits_{i=0}^{k-1} \frac{n^5}{3^{4i}} +C\sum\limits_{i=0}^{k-1} 3^i$
 
